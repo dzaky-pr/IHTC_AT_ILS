@@ -1,0 +1,206 @@
+{
+  // ============================================
+  // HEADER: General Configuration
+  // ============================================
+  
+  // Jumlah hari dalam periode penjadwalan
+  // WAJIB: kelipatan 7, range: 14-28 hari
+  "days": <integer>,
+
+  // Jumlah level keterampilan perawat (0 = lowest, L-1 = highest)
+  "skill_levels": <integer>,
+
+  // Tipe shift per hari (FIXED: harus ["early","late","night"])
+  // Total shifts dalam periode = 3 × days
+  // Shift numbering: 0 (day0-early), 1 (day0-late), 2 (day0-night), 
+  //                  3 (day1-early), 4 (day1-late), 5 (day1-night), ...
+  "shift_types": ["early", "late", "night"],
+
+  // Kategori kelompok umur pasien (ordered/hierarchical)
+  // Contoh: ["infant", "youth", "adult", "elderly"]
+  "age_groups": [
+    "<string>"
+  ],
+
+  // ============================================
+  // WEIGHTS: Bobot penalti soft constraints (instance-specific)
+  // ============================================
+  
+  "weights": {
+    "room_mixed_age": <integer>,          // S1: penalti per selisih age_group dalam room per hari
+    "room_nurse_skill": <integer>,        // S2: penalti per tingkat kekurangan skill level per shift
+    "continuity_of_care": <integer>,      // S3: penalti per nurse berbeda (min=3×admitted_patients)
+    "nurse_eccessive_workload": <integer>,// S4: penalti per unit workload berlebih per shift
+    "open_operating_theater": <integer>,  // S5: penalti per OT yang dibuka per hari
+    "surgeon_transfer": <integer>,        // S6: penalti per perpindahan OT surgeon per hari kerja
+    "patient_delay": <integer>,           // S7: penalti per hari keterlambatan admission
+    "unscheduled_optional": <integer>     // S8: penalti per pasien optional yang tidak dijadwalkan
+  },
+
+  // ============================================
+  // OCCUPANTS: Pasien yang sudah ada di hari-0
+  // ============================================
+  
+  // Admission date dan room sudah FIXED, tidak dapat diubah
+  // Tidak berkontribusi pada OT occupancy (operasi sudah lewat)
+  // Berkontribusi pada: H1, S1, H7 (room constraints), S2, S3, S4 (nurse constraints)
+  "occupants": [
+    {
+      "id": "<string>",                   // unique identifier (format: "a00", "a01", ...)
+      
+      "gender": "<string>",               // "A" atau "B" (H1: no gender mix in room)
+      
+      "age_group": "<string>",            // harus ada dalam age_groups (S1: minimize age mix)
+      
+      "length_of_stay": <integer>,        // sisa hari di rumah sakit (≥ 1)
+                                          // menunjukkan berapa hari lagi sebelum discharge
+      
+      // ⚠️ CRITICAL: Array length = 3 × length_of_stay
+      // Urutan: [early_day0, late_day0, night_day0, early_day1, late_day1, night_day1, ...]
+      // Index 0 = early shift hari pertama occupant di sistem
+      // Index (3×LOS-1) = night shift hari discharge
+      "workload_produced": [<ints>],      // workload yang dihasilkan per shift
+      
+      "skill_level_required": [<ints>],   // skill minimum required per shift
+                                          // nilai: 0 s.d. (skill_levels-1)
+      
+      "room_id": "<string>"               // FIXED: tidak dapat dipindahkan (format: "r00", "r01", ...)
+    }
+  ],
+
+  // ============================================
+  // PATIENTS: Pasien baru yang perlu dijadwalkan
+  // ============================================
+  
+  "patients": [
+    {
+      "id": "<string>",                   // unique identifier (format: "p000", "p001", ...)
+      
+      // H5: mandatory = true → HARUS diadmit dalam periode (violation jika tidak)
+      //     mandatory = false (optional) → boleh ditunda ke periode berikutnya (S8 penalty)
+      "mandatory": <boolean>,             
+      
+      "gender": "<string>",               // "A" atau "B" (H1: no gender mix in same room same day)
+      
+      "age_group": "<string>",            // harus ada dalam age_groups (S1: minimize age differences)
+      
+      "length_of_stay": <integer>,        // total hari rawat inap (≥ 1)
+                                          // patient stays in ONE room entire duration
+      
+      // H6: admission day harus ∈ [surgery_release_day, surgery_due_day]
+      // S7: delay = (admission_day - surgery_release_day), minimize delay
+      "surgery_release_day": <integer>,   // earliest admission (range: 0 sampai days-1)
+      
+      // ⚠️ CRITICAL: Field ini CONDITIONAL - HANYA ADA untuk mandatory patients
+      // - mandatory = true  → field INI ADA, nilai range: surgery_release_day sampai days-1
+      // - mandatory = false → field INI TIDAK ADA (optional patients tidak punya due date)
+      // Parser MUST handle missing field dengan .get("surgery_due_day", None)
+      "surgery_due_day": <integer>,       // [CONDITIONAL] latest admission, HANYA untuk mandatory
+      
+      "surgery_duration": <integer>,      // durasi operasi dalam menit
+                                          // surgery ALWAYS terjadi pada admission day
+      
+      "surgeon_id": "<string>",           // H3: surgeon tetap, tidak dapat diubah (format: "s0", "s1", ...)
+                                          // surgeon availability: max_surgery_time[admission_day] > 0
+      
+      // H2: patient TIDAK boleh ditempatkan di room dalam list ini
+      "incompatible_room_ids": ["<string>"],  // array bisa kosong []
+                                          // format: ["r00", "r14", ...]
+      
+      // ⚠️ CRITICAL: Array length = 3 × length_of_stay
+      // Index 0 = early shift pada admission day
+      // Index (3×LOS-1) = night shift pada discharge day
+      // Admission/discharge terjadi AFTER night shift, BEFORE early shift
+      "workload_produced": [<ints>],      // workload yang dihasilkan per shift
+                                          // digunakan untuk S4: nurse workload constraint
+      
+      "skill_level_required": [<ints>]    // skill minimum required per shift
+                                          // nilai: 0 s.d. (skill_levels-1)
+                                          // digunakan untuk S2: nurse skill matching
+    }
+  ],
+
+  // ============================================
+  // SURGEONS: Resource dokter bedah
+  // ============================================
+  
+  "surgeons": [
+    {
+      "id": "<string>",                   // unique identifier (format: "s0", "s1", ...)
+      
+      // ⚠️ CRITICAL: Array length = days (index 0 = day 0, index 1 = day 1, ...)
+      // H3: Σ(surgery_duration of patients assigned to surgeon on day d) ≤ max_surgery_time[d]
+      // Nilai 0 = surgeon UNAVAILABLE pada hari tersebut (tidak dapat operasi)
+      // Open scheduling policy: surgeon dapat beroperasi di OT mana saja
+      "max_surgery_time": [<ints>]       // kapasitas waktu operasi per hari (dalam menit)
+    }
+  ],
+
+  // ============================================
+  // OPERATING THEATERS: Ruang operasi
+  // ============================================
+  
+  "operating_theaters": [
+    {
+      "id": "<string>",                   // unique identifier (format: "t0", "t1", ...)
+      
+      // ⚠️ CRITICAL: Array length = days (index 0 = day 0, index 1 = day 1, ...)
+      // H4: Σ(surgery_duration of patients assigned to OT on day d) ≤ availability[d]
+      // Nilai 0 = OT UNAVAILABLE/CLOSED pada hari tersebut
+      // S5: minimize Σ(OTs opened per day) - OT dianggap "open" jika ada patient assigned
+      // S6: minimize surgeon transfers - surgeon pindah OT dalam 1 hari kerja
+      "availability": [<ints>]           // kapasitas maksimum per hari (dalam menit)
+    }
+  ],
+
+  // ============================================
+  // ROOMS: Kamar rawat inap
+  // ============================================
+  
+  "rooms": [
+    {
+      "id": "<string>",                   // unique identifier (format: "r00", "r01", ...)
+      
+      // H7: jumlah pasien dalam room pada hari tertentu ≤ capacity
+      // H1: TIDAK BOLEH gender mix dalam 1 room pada hari yang sama
+      // H2: patient hanya boleh assigned ke compatible rooms (tidak dalam incompatible_room_ids)
+      // S1: minimize maximum age_group difference dalam room per hari
+      // Note: patient TIDAK DAPAT dipindahkan antar room (1 room untuk entire stay)
+      "capacity": <integer>              // jumlah tempat tidur (≥ 1)
+    }
+  ],
+
+  // ============================================
+  // NURSES: Perawat dengan roster tetap
+  // ============================================
+  
+  "nurses": [
+    {
+      "id": "<string>",                   // unique identifier (format: "n000", "n001", ...)
+      
+      // Skill level hierarchical: 0 (lowest) sampai (skill_levels-1) (highest)
+      // S2: nurse dapat handle patient dengan skill requirement ≤ nurse skill_level
+      //     penalty = max(0, patient_required_skill - nurse_skill) per shift
+      "skill_level": <integer>,         
+      
+      // ⚠️ ROSTER TETAP: tidak dapat diubah, predefined schedule
+      // Constraint: setiap nurse MAXIMUM 1 shift per hari
+      // Nurse dapat di-assign ke MULTIPLE rooms dalam 1 shift
+      // Setiap room hanya dapat di-assign ke 1 nurse per shift
+      "working_shifts": [
+        {
+          "day": <integer>,             // hari kerja (range: 0 sampai days-1)
+          
+          "shift": "<string>",          // "early", "late", atau "night"
+                                        // kombinasi (day, shift) harus unique per nurse
+          
+          // S4: Σ(workload from all rooms assigned to nurse in this shift) ≤ max_load
+          // penalty = max(0, total_workload - max_load)
+          // ⚠️ max_load berbeda per shift karena auxiliary activities
+          //    typical pattern: lower max_load = nurse ada kegiatan lain
+          "max_load": <integer>         // kapasitas workload maksimum per shift
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,454 @@
+Instance | Days | Rooms | Beds | Nurs | Pats | Mand | Surg | OT  | Occu | P/Bed Ratio
+-----------------------------------------------------------------------------------------
+i01      | 14   | 4     | 9    | 12   | 28   | 0    | 1    | 2   | 3    | 0,22
+i02      | 14   | 5     | 16   | 13   | 37   | 12   | 1    | 2   | 8    | 0,17
+i03      | 14   | 4     | 12   | 10   | 45   | 7    | 1    | 2   | 3    | 0,27
+i04      | 14   | 9     | 29   | 21   | 54   | 36   | 2    | 2   | 9    | 0,13
+i05      | 21   | 10    | 28   | 25   | 93   | 6    | 1    | 2   | 13   | 0,16
+i06      | 21   | 7     | 20   | 16   | 105  | 28   | 1    | 2   | 12   | 0,25
+i07      | 14   | 13    | 40   | 29   | 79   | 25   | 3    | 4   | 20   | 0,14
+i08      | 28   | 14    | 45   | 32   | 174  | 138  | 4    | 3   | 21   | 0,14
+i09      | 14   | 12    | 34   | 26   | 96   | 7    | 4    | 3   | 17   | 0,20
+i10      | 21   | 8     | 23   | 20   | 156  | 49   | 2    | 3   | 8    | 0,32
+i11      | 14   | 15    | 47   | 34   | 112  | 28   | 2    | 3   | 15   | 0,17
+i12      | 14   | 12    | 39   | 29   | 121  | 74   | 3    | 5   | 21   | 0,22
+i13      | 14   | 10    | 32   | 24   | 129  | 27   | 5    | 8   | 18   | 0,29
+i14      | 14   | 21    | 63   | 44   | 138  | 79   | 3    | 4   | 36   | 0,16
+i15      | 14   | 16    | 48   | 34   | 146  | 44   | 5    | 7   | 27   | 0,22
+i16      | 14   | 17    | 45   | 36   | 154  | 125  | 5    | 5   | 16   | 0,24
+i17      | 28   | 18    | 52   | 37   | 325  | 22   | 6    | 5   | 15   | 0,22
+i18      | 21   | 19    | 53   | 41   | 257  | 61   | 3    | 4   | 15   | 0,23
+i19      | 28   | 25    | 76   | 52   | 359  | 67   | 7    | 8   | 26   | 0,17
+i20      | 14   | 15    | 43   | 33   | 188  | 108  | 5    | 7   | 20   | 0,31
+i21      | 21   | 21    | 57   | 44   | 294  | 37   | 6    | 7   | 31   | 0,25
+i22      | 28   | 20    | 55   | 44   | 409  | 199  | 6    | 7   | 22   | 0,27
+i23      | 28   | 26    | 78   | 55   | 426  | 157  | 5    | 5   | 43   | 0,20
+i24      | 28   | 33    | 98   | 65   | 443  | 306  | 4    | 6   | 29   | 0,16
+i25      | 14   | 29    | 88   | 57   | 230  | 19   | 9    | 7   | 36   | 0,19
+i26      | 28   | 26    | 75   | 54   | 476  | 195  | 7    | 8   | 33   | 0,23
+i27      | 28   | 26    | 77   | 55   | 493  | 123  | 8    | 8   | 41   | 0,23
+i28      | 21   | 26    | 80   | 51   | 383  | 192  | 5    | 6   | 29   | 0,23
+i29      | 14   | 28    | 81   | 60   | 264  | 56   | 10   | 10  | 44   | 0,23
+i30      | 21   | 25    | 78   | 50   | 408  | 212  | 7    | 7   | 39   | 0,25
+
+Detail Metrics per Instance:
+--- i01 ---
+Beds:9 Rooms:4 Days:14 Nurses:12 Patients:28 Mand:0 Occu:3
+Patients/Nurse:2,33 Patients/Room:7,00 Patients/Bed/Day:0,22
+LOS Patients avg/med:5,29/5,50 | LOS Occ avg/med:1,67/2,00
+Bed-days: total=126,00 occupants=5,00 patients(potential)=148,00
+Workload vs capacity (occupants only): demand=22,00 cap=1186,00 gap min/avg/max=20,00/27,71/37,00
+Workload totals: occupants=22,00 patients=887,00 total=909,00 capacity=1186,00 total gap=277,00
+Skill supply:{0=4, 1=3, 2=5} | Skill demand (occ+pat):{0=210, 1=152, 2=97} | maxReq=2 maxSup=2
+Patient workload by shift:[333,00, 332,00, 222,00]
+OT capacity total=17880,00 min/day=480,00 max/day=1920,00 | Surgery total duration=6300,00
+Surgeon load map:{s0=6300}
+Release day avg=3,54 due avg=3,54 window avg=0,00
+Optional patients=28,00 optional LOS sum=148,00 free bed-days=121,00 risk days (unalloc est)=27,00
+----------------------------------------------
+--- i02 ---
+Beds:16 Rooms:5 Days:14 Nurses:13 Patients:37 Mand:12 Occu:8
+Patients/Nurse:2,85 Patients/Room:7,40 Patients/Bed/Day:0,17
+LOS Patients avg/med:4,30/4,00 | LOS Occ avg/med:3,38/2,50
+Bed-days: total=224,00 occupants=27,00 patients(potential)=159,00
+Workload vs capacity (occupants only): demand=143,00 cap=1447,00 gap min/avg/max=19,00/31,05/42,00
+Workload totals: occupants=143,00 patients=973,00 total=1116,00 capacity=1447,00 total gap=331,00
+Skill supply:{0=3, 1=6, 2=4} | Skill demand (occ+pat):{0=246, 1=197, 2=115} | maxReq=2 maxSup=2
+Patient workload by shift:[371,00, 353,00, 249,00]
+OT capacity total=20280,00 min/day=720,00 max/day=1800,00 | Surgery total duration=3270,00
+Surgeon load map:{s0=3270}
+Release day avg=2,68 due avg=5,19 window avg=2,51
+Optional patients=25,00 optional LOS sum=159,00 free bed-days=197,00 risk days (unalloc est)=0,00
+----------------------------------------------
+--- i03 ---
+Beds:12 Rooms:4 Days:14 Nurses:10 Patients:45 Mand:7 Occu:3
+Patients/Nurse:4,50 Patients/Room:11,25 Patients/Bed/Day:0,27
+LOS Patients avg/med:4,87/4,00 | LOS Occ avg/med:1,67/1,00
+Bed-days: total=168,00 occupants=5,00 patients(potential)=219,00
+Workload vs capacity (occupants only): demand=29,00 cap=1137,00 gap min/avg/max=19,00/26,38/37,00
+Workload totals: occupants=29,00 patients=1280,00 total=1309,00 capacity=1137,00 total gap=-172,00
+Skill supply:{0=2, 1=4, 2=4} | Skill demand (occ+pat):{0=285, 1=212, 2=175} | maxReq=2 maxSup=2
+Patient workload by shift:[482,00, 474,00, 324,00]
+OT capacity total=18360,00 min/day=0,00 max/day=1920,00 | Surgery total duration=7860,00
+Surgeon load map:{s0=7860}
+Release day avg=2,53 due avg=3,40 window avg=0,87
+Optional patients=38,00 optional LOS sum=219,00 free bed-days=163,00 risk days (unalloc est)=56,00
+----------------------------------------------
+--- i04 ---
+Beds:29 Rooms:9 Days:14 Nurses:21 Patients:54 Mand:36 Occu:9
+Patients/Nurse:2,57 Patients/Room:6,00 Patients/Bed/Day:0,13
+LOS Patients avg/med:4,43/4,00 | LOS Occ avg/med:4,89/4,00
+Bed-days: total=406,00 occupants=44,00 patients(potential)=239,00
+Workload vs capacity (occupants only): demand=239,00 cap=2336,00 gap min/avg/max=36,00/49,93/64,00
+Workload totals: occupants=239,00 patients=1403,00 total=1642,00 capacity=2336,00 total gap=694,00
+Skill supply:{0=10, 1=5, 2=6} | Skill demand (occ+pat):{0=381, 1=278, 2=190} | maxReq=2 maxSup=2
+Patient workload by shift:[547,00, 511,00, 345,00]
+OT capacity total=25800,00 min/day=480,00 max/day=2520,00 | Surgery total duration=6450,00
+Surgeon load map:{s0=2700, s1=3750}
+Release day avg=3,28 due avg=8,48 window avg=5,20
+Optional patients=18,00 optional LOS sum=239,00 free bed-days=362,00 risk days (unalloc est)=0,00
+----------------------------------------------
+--- i05 ---
+Beds:28 Rooms:10 Days:21 Nurses:25 Patients:93 Mand:6 Occu:13
+Patients/Nurse:3,72 Patients/Room:9,30 Patients/Bed/Day:0,16
+LOS Patients avg/med:4,53/4,00 | LOS Occ avg/med:2,54/2,00
+Bed-days: total=588,00 occupants=33,00 patients(potential)=421,00
+Workload vs capacity (occupants only): demand=165,00 cap=3745,00 gap min/avg/max=34,00/56,83/74,00
+Workload totals: occupants=165,00 patients=2497,00 total=2662,00 capacity=3745,00 total gap=1083,00
+Skill supply:{0=9, 1=4, 2=12} | Skill demand (occ+pat):{0=598, 1=466, 2=298} | maxReq=2 maxSup=2
+Patient workload by shift:[943,00, 923,00, 631,00]
+OT capacity total=26520,00 min/day=0,00 max/day=1800,00 | Surgery total duration=10290,00
+Surgeon load map:{s0=10290}
+Release day avg=2,85 due avg=3,55 window avg=0,70
+Optional patients=87,00 optional LOS sum=421,00 free bed-days=555,00 risk days (unalloc est)=0,00
+----------------------------------------------
+--- i06 ---
+Beds:20 Rooms:7 Days:21 Nurses:16 Patients:105 Mand:28 Occu:12
+Patients/Nurse:6,56 Patients/Room:15,00 Patients/Bed/Day:0,25
+LOS Patients avg/med:4,71/4,00 | LOS Occ avg/med:3,25/3,00
+Bed-days: total=420,00 occupants=39,00 patients(potential)=495,00
+Workload vs capacity (occupants only): demand=197,00 cap=2792,00 gap min/avg/max=21,00/41,19/55,00
+Workload totals: occupants=197,00 patients=2930,00 total=3127,00 capacity=2792,00 total gap=-335,00
+Skill supply:{0=5, 1=4, 2=7} | Skill demand (occ+pat):{0=722, 1=541, 2=339} | maxReq=2 maxSup=2
+Patient workload by shift:[1129,00, 1074,00, 727,00]
+OT capacity total=26400,00 min/day=0,00 max/day=1920,00 | Surgery total duration=18240,00
+Surgeon load map:{s0=18240}
+Release day avg=6,19 due avg=8,65 window avg=2,46
+Optional patients=77,00 optional LOS sum=495,00 free bed-days=381,00 risk days (unalloc est)=114,00
+----------------------------------------------
+--- i07 ---
+Beds:40 Rooms:13 Days:14 Nurses:29 Patients:79 Mand:25 Occu:20
+Patients/Nurse:2,72 Patients/Room:6,08 Patients/Bed/Day:0,14
+LOS Patients avg/med:3,92/3,00 | LOS Occ avg/med:3,20/3,00
+Bed-days: total=560,00 occupants=64,00 patients(potential)=310,00
+Workload vs capacity (occupants only): demand=328,00 cap=3249,00 gap min/avg/max=40,00/69,55/88,00
+Workload totals: occupants=328,00 patients=1809,00 total=2137,00 capacity=3249,00 total gap=1112,00
+Skill supply:{0=10, 1=12, 2=7} | Skill demand (occ+pat):{0=514, 1=358, 2=250} | maxReq=2 maxSup=2
+Patient workload by shift:[668,00, 662,00, 479,00]
+OT capacity total=41280,00 min/day=1200,00 max/day=4080,00 | Surgery total duration=8850,00
+Surgeon load map:{s0=3420, s1=3090, s2=2340}
+Release day avg=4,13 due avg=6,24 window avg=2,11
+Optional patients=54,00 optional LOS sum=310,00 free bed-days=496,00 risk days (unalloc est)=0,00
+----------------------------------------------
+--- i08 ---
+Beds:45 Rooms:14 Days:28 Nurses:32 Patients:174 Mand:138 Occu:21
+Patients/Nurse:5,44 Patients/Room:12,43 Patients/Bed/Day:0,14
+LOS Patients avg/med:4,86/4,00 | LOS Occ avg/med:2,81/2,00
+Bed-days: total=1260,00 occupants=59,00 patients(potential)=845,00
+Workload vs capacity (occupants only): demand=302,00 cap=6899,00 gap min/avg/max=44,00/78,54/97,00
+Workload totals: occupants=302,00 patients=5029,00 total=5331,00 capacity=6899,00 total gap=1568,00
+Skill supply:{0=10, 1=7, 2=15} | Skill demand (occ+pat):{0=1155, 1=959, 2=598} | maxReq=2 maxSup=2
+Patient workload by shift:[1912,00, 1831,00, 1286,00]
+OT capacity total=82800,00 min/day=960,00 max/day=4200,00 | Surgery total duration=23970,00
+Surgeon load map:{s3=5970, s0=5400, s1=5310, s2=7290}
+Release day avg=7,93 due avg=19,86 window avg=11,94
+Optional patients=36,00 optional LOS sum=845,00 free bed-days=1201,00 risk days (unalloc est)=0,00
+----------------------------------------------
+--- i09 ---
+Beds:34 Rooms:12 Days:14 Nurses:26 Patients:96 Mand:7 Occu:17
+Patients/Nurse:3,69 Patients/Room:8,00 Patients/Bed/Day:0,20
+LOS Patients avg/med:4,81/4,00 | LOS Occ avg/med:2,41/2,00
+Bed-days: total=476,00 occupants=41,00 patients(potential)=462,00
+Workload vs capacity (occupants only): demand=212,00 cap=2998,00 gap min/avg/max=37,00/66,33/86,00
+Workload totals: occupants=212,00 patients=2707,00 total=2919,00 capacity=2998,00 total gap=79,00
+Skill supply:{0=3, 1=16, 2=7} | Skill demand (occ+pat):{0=677, 1=501, 2=331} | maxReq=2 maxSup=2
+Patient workload by shift:[1011,00, 997,00, 699,00]
+OT capacity total=40200,00 min/day=1200,00 max/day=3720,00 | Surgery total duration=12540,00
+Surgeon load map:{s3=2130, s0=3060, s1=3720, s2=3630}
+Release day avg=2,71 due avg=3,26 window avg=0,55
+Optional patients=89,00 optional LOS sum=462,00 free bed-days=435,00 risk days (unalloc est)=27,00
+----------------------------------------------
+--- i10 ---
+Beds:23 Rooms:8 Days:21 Nurses:20 Patients:156 Mand:49 Occu:8
+Patients/Nurse:7,80 Patients/Room:19,50 Patients/Bed/Day:0,32
+LOS Patients avg/med:4,52/4,00 | LOS Occ avg/med:2,63/2,00
+Bed-days: total=483,00 occupants=21,00 patients(potential)=705,00
+Workload vs capacity (occupants only): demand=111,00 cap=3145,00 gap min/avg/max=29,00/48,16/60,00
+Workload totals: occupants=111,00 patients=4154,00 total=4265,00 capacity=3145,00 total gap=-1120,00
+Skill supply:{0=9, 1=6, 2=5} | Skill demand (occ+pat):{0=966, 1=726, 2=486} | maxReq=2 maxSup=2
+Patient workload by shift:[1575,00, 1525,00, 1054,00]
+OT capacity total=43920,00 min/day=600,00 max/day=3120,00 | Surgery total duration=16680,00
+Surgeon load map:{s0=6510, s1=10170}
+Release day avg=4,47 due avg=7,92 window avg=3,45
+Optional patients=107,00 optional LOS sum=705,00 free bed-days=462,00 risk days (unalloc est)=243,00
+----------------------------------------------
+--- i11 ---
+Beds:47 Rooms:15 Days:14 Nurses:34 Patients:112 Mand:28 Occu:15
+Patients/Nurse:3,29 Patients/Room:7,47 Patients/Bed/Day:0,17
+LOS Patients avg/med:4,85/5,00 | LOS Occ avg/med:3,00/2,00
+Bed-days: total=658,00 occupants=45,00 patients(potential)=543,00
+Workload vs capacity (occupants only): demand=221,00 cap=3704,00 gap min/avg/max=61,00/82,93/103,00
+Workload totals: occupants=221,00 patients=3225,00 total=3446,00 capacity=3704,00 total gap=258,00
+Skill supply:{0=13, 1=15, 2=6} | Skill demand (occ+pat):{0=776, 1=622, 2=366} | maxReq=2 maxSup=2
+Patient workload by shift:[1213,00, 1186,00, 826,00]
+OT capacity total=31800,00 min/day=1320,00 max/day=3000,00 | Surgery total duration=21000,00
+Surgeon load map:{s0=9600, s1=11400}
+Release day avg=4,41 due avg=6,19 window avg=1,78
+Optional patients=84,00 optional LOS sum=543,00 free bed-days=613,00 risk days (unalloc est)=0,00
+----------------------------------------------
+--- i12 ---
+Beds:39 Rooms:12 Days:14 Nurses:29 Patients:121 Mand:74 Occu:21
+Patients/Nurse:4,17 Patients/Room:10,08 Patients/Bed/Day:0,22
+LOS Patients avg/med:4,95/5,00 | LOS Occ avg/med:2,24/2,00
+Bed-days: total=546,00 occupants=47,00 patients(potential)=599,00
+Workload vs capacity (occupants only): demand=234,00 cap=3027,00 gap min/avg/max=35,00/66,50/86,00
+Workload totals: occupants=234,00 patients=3594,00 total=3828,00 capacity=3027,00 total gap=-801,00
+Skill supply:{0=12, 1=9, 2=8} | Skill demand (occ+pat):{0=863, 1=625, 2=450} | maxReq=2 maxSup=2
+Patient workload by shift:[1358,00, 1331,00, 905,00]
+OT capacity total=53040,00 min/day=2040,00 max/day=5040,00 | Surgery total duration=20850,00
+Surgeon load map:{s0=6630, s1=6900, s2=7320}
+Release day avg=4,83 due avg=7,88 window avg=3,06
+Optional patients=47,00 optional LOS sum=599,00 free bed-days=499,00 risk days (unalloc est)=100,00
+----------------------------------------------
+--- i13 ---
+Beds:32 Rooms:10 Days:14 Nurses:24 Patients:129 Mand:27 Occu:18
+Patients/Nurse:5,38 Patients/Room:12,90 Patients/Bed/Day:0,29
+LOS Patients avg/med:4,94/4,00 | LOS Occ avg/med:3,83/2,50
+Bed-days: total=448,00 occupants=69,00 patients(potential)=637,00
+Workload vs capacity (occupants only): demand=347,00 cap=2571,00 gap min/avg/max=18,00/52,95/69,00
+Workload totals: occupants=347,00 patients=3789,00 total=4136,00 capacity=2571,00 total gap=-1565,00
+Skill supply:{0=8, 1=10, 2=6} | Skill demand (occ+pat):{0=929, 1=697, 2=492} | maxReq=2 maxSup=2
+Patient workload by shift:[1418,00, 1392,00, 979,00]
+OT capacity total=81720,00 min/day=3360,00 max/day=7440,00 | Surgery total duration=20310,00
+Surgeon load map:{s3=4320, s4=4950, s0=1800, s1=5460, s2=3780}
+Release day avg=2,16 due avg=3,79 window avg=1,64
+Optional patients=102,00 optional LOS sum=637,00 free bed-days=379,00 risk days (unalloc est)=258,00
+----------------------------------------------
+--- i14 ---
+Beds:63 Rooms:21 Days:14 Nurses:44 Patients:138 Mand:79 Occu:36
+Patients/Nurse:3,14 Patients/Room:6,57 Patients/Bed/Day:0,16
+LOS Patients avg/med:4,38/4,00 | LOS Occ avg/med:2,67/2,00
+Bed-days: total=882,00 occupants=96,00 patients(potential)=605,00
+Workload vs capacity (occupants only): demand=484,00 cap=5045,00 gap min/avg/max=56,00/108,60/140,00
+Workload totals: occupants=484,00 patients=3534,00 total=4018,00 capacity=5045,00 total gap=1027,00
+Skill supply:{0=17, 1=10, 2=17} | Skill demand (occ+pat):{0=912, 1=731, 2=460} | maxReq=2 maxSup=2
+Patient workload by shift:[1324,00, 1319,00, 891,00]
+OT capacity total=43680,00 min/day=1080,00 max/day=4200,00 | Surgery total duration=14280,00
+Surgeon load map:{s0=5490, s1=2730, s2=6060}
+Release day avg=4,28 due avg=7,73 window avg=3,45
+Optional patients=59,00 optional LOS sum=605,00 free bed-days=786,00 risk days (unalloc est)=0,00
+----------------------------------------------
+--- i15 ---
+Beds:48 Rooms:16 Days:14 Nurses:34 Patients:146 Mand:44 Occu:27
+Patients/Nurse:4,29 Patients/Room:9,13 Patients/Bed/Day:0,22
+LOS Patients avg/med:4,75/4,00 | LOS Occ avg/med:2,78/2,00
+Bed-days: total=672,00 occupants=75,00 patients(potential)=693,00
+Workload vs capacity (occupants only): demand=383,00 cap=3955,00 gap min/avg/max=51,00/85,05/106,00
+Workload totals: occupants=383,00 patients=4167,00 total=4550,00 capacity=3955,00 total gap=-595,00
+Skill supply:{0=9, 1=11, 2=14} | Skill demand (occ+pat):{0=1024, 1=763, 2=517} | maxReq=2 maxSup=2
+Patient workload by shift:[1594,00, 1528,00, 1045,00]
+OT capacity total=75960,00 min/day=2880,00 max/day=7200,00 | Surgery total duration=20490,00
+Surgeon load map:{s3=4110, s4=4830, s0=1620, s1=4470, s2=5460}
+Release day avg=2,15 due avg=4,63 window avg=2,48
+Optional patients=102,00 optional LOS sum=693,00 free bed-days=597,00 risk days (unalloc est)=96,00
+----------------------------------------------
+--- i16 ---
+Beds:45 Rooms:17 Days:14 Nurses:36 Patients:154 Mand:125 Occu:16
+Patients/Nurse:4,28 Patients/Room:9,06 Patients/Bed/Day:0,24
+LOS Patients avg/med:4,68/4,00 | LOS Occ avg/med:2,50/2,00
+Bed-days: total=630,00 occupants=40,00 patients(potential)=721,00
+Workload vs capacity (occupants only): demand=202,00 cap=4171,00 gap min/avg/max=68,00/94,50/116,00
+Workload totals: occupants=202,00 patients=4294,00 total=4496,00 capacity=4171,00 total gap=-325,00
+Skill supply:{0=16, 1=11, 2=9} | Skill demand (occ+pat):{0=1005, 1=782, 2=496} | maxReq=2 maxSup=2
+Patient workload by shift:[1627,00, 1580,00, 1087,00]
+OT capacity total=57480,00 min/day=2280,00 max/day=5760,00 | Surgery total duration=21090,00
+Surgeon load map:{s3=4260, s4=2430, s0=3840, s1=3990, s2=6570}
+Release day avg=5,35 due avg=9,98 window avg=4,63
+Optional patients=29,00 optional LOS sum=721,00 free bed-days=590,00 risk days (unalloc est)=131,00
+----------------------------------------------
+--- i17 ---
+Beds:52 Rooms:18 Days:28 Nurses:37 Patients:325 Mand:22 Occu:15
+Patients/Nurse:8,78 Patients/Room:18,06 Patients/Bed/Day:0,22
+LOS Patients avg/med:4,84/4,00 | LOS Occ avg/med:3,07/2,00
+Bed-days: total=1456,00 occupants=46,00 patients(potential)=1573,00
+Workload vs capacity (occupants only): demand=230,00 cap=8785,00 gap min/avg/max=73,00/101,85/121,00
+Workload totals: occupants=230,00 patients=9394,00 total=9624,00 capacity=8785,00 total gap=-839,00
+Skill supply:{0=12, 1=15, 2=10} | Skill demand (occ+pat):{0=2149, 1=1611, 2=1097} | maxReq=2 maxSup=2
+Patient workload by shift:[3558,00, 3474,00, 2362,00]
+OT capacity total=126480,00 min/day=1560,00 max/day=6360,00 | Surgery total duration=48480,00
+Surgeon load map:{s3=7470, s4=10410, s5=6600, s0=7200, s1=11100, s2=5700}
+Release day avg=3,45 due avg=4,74 window avg=1,30
+Optional patients=303,00 optional LOS sum=1573,00 free bed-days=1410,00 risk days (unalloc est)=163,00
+----------------------------------------------
+--- i18 ---
+Beds:53 Rooms:19 Days:21 Nurses:41 Patients:257 Mand:61 Occu:15
+Patients/Nurse:6,27 Patients/Room:13,53 Patients/Bed/Day:0,23
+LOS Patients avg/med:4,46/4,00 | LOS Occ avg/med:2,73/2,00
+Bed-days: total=1113,00 occupants=41,00 patients(potential)=1146,00
+Workload vs capacity (occupants only): demand=215,00 cap=6987,00 gap min/avg/max=76,00/107,49/128,00
+Workload totals: occupants=215,00 patients=6745,00 total=6960,00 capacity=6987,00 total gap=27,00
+Skill supply:{0=12, 1=13, 2=16} | Skill demand (occ+pat):{0=1593, 1=1200, 2=768} | maxReq=2 maxSup=2
+Patient workload by shift:[2546,00, 2483,00, 1716,00]
+OT capacity total=55800,00 min/day=480,00 max/day=4080,00 | Surgery total duration=24960,00
+Surgeon load map:{s0=5100, s1=7470, s2=12390}
+Release day avg=5,44 due avg=7,62 window avg=2,18
+Optional patients=196,00 optional LOS sum=1146,00 free bed-days=1072,00 risk days (unalloc est)=74,00
+----------------------------------------------
+--- i19 ---
+Beds:76 Rooms:25 Days:28 Nurses:52 Patients:359 Mand:67 Occu:26
+Patients/Nurse:6,90 Patients/Room:14,36 Patients/Bed/Day:0,17
+LOS Patients avg/med:5,09/4,00 | LOS Occ avg/med:2,62/2,00
+Bed-days: total=2128,00 occupants=68,00 patients(potential)=1827,00
+Workload vs capacity (occupants only): demand=337,00 cap=12032,00 gap min/avg/max=89,00/139,23/164,00
+Workload totals: occupants=337,00 patients=10745,00 total=11082,00 capacity=12032,00 total gap=950,00
+Skill supply:{0=14, 1=19, 2=19} | Skill demand (occ+pat):{0=2555, 1=1876, 2=1254} | maxReq=2 maxSup=2
+Patient workload by shift:[4097,00, 3979,00, 2669,00]
+OT capacity total=181800,00 min/day=2880,00 max/day=8640,00 | Surgery total duration=54960,00
+Surgeon load map:{s3=6990, s4=7650, s5=6390, s6=10800, s0=4650, s1=7770, s2=10710}
+Release day avg=4,57 due avg=8,29 window avg=3,72
+Optional patients=292,00 optional LOS sum=1827,00 free bed-days=2060,00 risk days (unalloc est)=0,00
+----------------------------------------------
+--- i20 ---
+Beds:43 Rooms:15 Days:14 Nurses:33 Patients:188 Mand:108 Occu:20
+Patients/Nurse:5,70 Patients/Room:12,53 Patients/Bed/Day:0,31
+LOS Patients avg/med:4,65/4,00 | LOS Occ avg/med:2,90/3,00
+Bed-days: total=602,00 occupants=58,00 patients(potential)=874,00
+Workload vs capacity (occupants only): demand=294,00 cap=3713,00 gap min/avg/max=46,00/81,40/102,00
+Workload totals: occupants=294,00 patients=5222,00 total=5516,00 capacity=3713,00 total gap=-1803,00
+Skill supply:{0=12, 1=11, 2=10} | Skill demand (occ+pat):{0=1246, 1=946, 2=604} | maxReq=2 maxSup=2
+Patient workload by shift:[1991,00, 1913,00, 1318,00]
+OT capacity total=70320,00 min/day=1320,00 max/day=6960,00 | Surgery total duration=28530,00
+Surgeon load map:{s3=4470, s4=6480, s0=7080, s1=6540, s2=3960}
+Release day avg=5,30 due avg=8,40 window avg=3,10
+Optional patients=80,00 optional LOS sum=874,00 free bed-days=544,00 risk days (unalloc est)=330,00
+----------------------------------------------
+--- i21 ---
+Beds:57 Rooms:21 Days:21 Nurses:44 Patients:294 Mand:37 Occu:31
+Patients/Nurse:6,68 Patients/Room:14,00 Patients/Bed/Day:0,25
+LOS Patients avg/med:4,70/4,00 | LOS Occ avg/med:2,77/2,00
+Bed-days: total=1197,00 occupants=86,00 patients(potential)=1381,00
+Workload vs capacity (occupants only): demand=431,00 cap=7621,00 gap min/avg/max=63,00/114,13/138,00
+Workload totals: occupants=431,00 patients=8196,00 total=8627,00 capacity=7621,00 total gap=-1006,00
+Skill supply:{0=17, 1=14, 2=13} | Skill demand (occ+pat):{0=1941, 1=1489, 2=971} | maxReq=2 maxSup=2
+Patient workload by shift:[3083,00, 3010,00, 2103,00]
+OT capacity total=116760,00 min/day=2040,00 max/day=7440,00 | Surgery total duration=41040,00
+Surgeon load map:{s3=5730, s4=6120, s5=9030, s0=5820, s1=6930, s2=7410}
+Release day avg=4,63 due avg=6,17 window avg=1,54
+Optional patients=257,00 optional LOS sum=1381,00 free bed-days=1111,00 risk days (unalloc est)=270,00
+----------------------------------------------
+--- i22 ---
+Beds:55 Rooms:20 Days:28 Nurses:44 Patients:409 Mand:199 Occu:22
+Patients/Nurse:9,30 Patients/Room:20,45 Patients/Bed/Day:0,27
+LOS Patients avg/med:4,97/5,00 | LOS Occ avg/med:2,59/2,00
+Bed-days: total=1540,00 occupants=57,00 patients(potential)=2033,00
+Workload vs capacity (occupants only): demand=293,00 cap=9661,00 gap min/avg/max=70,00/111,52/132,00
+Workload totals: occupants=293,00 patients=12106,00 total=12399,00 capacity=9661,00 total gap=-2738,00
+Skill supply:{0=22, 1=10, 2=12} | Skill demand (occ+pat):{0=2796, 1=2089, 2=1385} | maxReq=2 maxSup=2
+Patient workload by shift:[4619,00, 4470,00, 3017,00]
+OT capacity total=160920,00 min/day=3000,00 max/day=7560,00 | Surgery total duration=65400,00
+Surgeon load map:{s3=9990, s4=11430, s5=11790, s0=12540, s1=10740, s2=8910}
+Release day avg=8,84 due avg=16,04 window avg=7,19
+Optional patients=210,00 optional LOS sum=2033,00 free bed-days=1483,00 risk days (unalloc est)=550,00
+----------------------------------------------
+--- i23 ---
+Beds:78 Rooms:26 Days:28 Nurses:55 Patients:426 Mand:157 Occu:43
+Patients/Nurse:7,75 Patients/Room:16,38 Patients/Bed/Day:0,20
+LOS Patients avg/med:4,46/4,00 | LOS Occ avg/med:2,44/2,00
+Bed-days: total=2184,00 occupants=105,00 patients(potential)=1900,00
+Workload vs capacity (occupants only): demand=530,00 cap=12475,00 gap min/avg/max=63,00/142,20/170,00
+Workload totals: occupants=530,00 patients=11280,00 total=11810,00 capacity=12475,00 total gap=665,00
+Skill supply:{0=14, 1=17, 2=24} | Skill demand (occ+pat):{0=2713, 1=1953, 2=1349} | maxReq=2 maxSup=2
+Patient workload by shift:[4257,00, 4146,00, 2877,00]
+OT capacity total=118440,00 min/day=1200,00 max/day=5520,00 | Surgery total duration=53910,00
+Surgeon load map:{s3=10200, s4=8580, s0=12240, s1=10620, s2=12270}
+Release day avg=8,28 due avg=14,15 window avg=5,88
+Optional patients=269,00 optional LOS sum=1900,00 free bed-days=2079,00 risk days (unalloc est)=0,00
+----------------------------------------------
+--- i24 ---
+Beds:98 Rooms:33 Days:28 Nurses:65 Patients:443 Mand:306 Occu:29
+Patients/Nurse:6,82 Patients/Room:13,42 Patients/Bed/Day:0,16
+LOS Patients avg/med:4,53/4,00 | LOS Occ avg/med:3,10/2,00
+Bed-days: total=2744,00 occupants=90,00 patients(potential)=2006,00
+Workload vs capacity (occupants only): demand=444,00 cap=15619,00 gap min/avg/max=120,00/180,65/209,00
+Workload totals: occupants=444,00 patients=11902,00 total=12346,00 capacity=15619,00 total gap=3273,00
+Skill supply:{0=20, 1=28, 2=17} | Skill demand (occ+pat):{0=2819, 1=2067, 2=1402} | maxReq=2 maxSup=2
+Patient workload by shift:[4510,00, 4357,00, 3035,00]
+OT capacity total=127200,00 min/day=1920,00 max/day=6120,00 | Surgery total duration=50820,00
+Surgeon load map:{s3=12780, s0=12540, s1=15270, s2=10230}
+Release day avg=10,80 due avg=18,85 window avg=8,05
+Optional patients=137,00 optional LOS sum=2006,00 free bed-days=2654,00 risk days (unalloc est)=0,00
+----------------------------------------------
+--- i25 ---
+Beds:88 Rooms:29 Days:14 Nurses:57 Patients:230 Mand:19 Occu:36
+Patients/Nurse:4,04 Patients/Room:7,93 Patients/Bed/Day:0,19
+LOS Patients avg/med:4,75/4,00 | LOS Occ avg/med:2,25/1,50
+Bed-days: total=1232,00 occupants=81,00 patients(potential)=1093,00
+Workload vs capacity (occupants only): demand=404,00 cap=6933,00 gap min/avg/max=97,00/155,45/185,00
+Workload totals: occupants=404,00 patients=6510,00 total=6914,00 capacity=6933,00 total gap=19,00
+Skill supply:{0=22, 1=10, 2=25} | Skill demand (occ+pat):{0=1608, 1=1137, 2=777} | maxReq=2 maxSup=2
+Patient workload by shift:[2492,00, 2366,00, 1652,00]
+OT capacity total=92880,00 min/day=3840,00 max/day=8760,00 | Surgery total duration=36000,00
+Surgeon load map:{s3=2550, s4=3990, s5=3150, s6=3630, s7=3330, s8=2370, s0=5370, s1=5760, s2=5850}
+Release day avg=2,74 due avg=3,45 window avg=0,71
+Optional patients=211,00 optional LOS sum=1093,00 free bed-days=1151,00 risk days (unalloc est)=0,00
+----------------------------------------------
+--- i26 ---
+Beds:75 Rooms:26 Days:28 Nurses:54 Patients:476 Mand:195 Occu:33
+Patients/Nurse:8,81 Patients/Room:18,31 Patients/Bed/Day:0,23
+LOS Patients avg/med:4,73/4,00 | LOS Occ avg/med:3,27/3,00
+Bed-days: total=2100,00 occupants=108,00 patients(potential)=2253,00
+Workload vs capacity (occupants only): demand=548,00 cap=12475,00 gap min/avg/max=87,00/141,99/167,00
+Workload totals: occupants=548,00 patients=13387,00 total=13935,00 capacity=12475,00 total gap=-1460,00
+Skill supply:{0=19, 1=19, 2=16} | Skill demand (occ+pat):{0=3180, 1=2367, 2=1536} | maxReq=2 maxSup=2
+Patient workload by shift:[5044,00, 4942,00, 3401,00]
+OT capacity total=171840,00 min/day=3240,00 max/day=8400,00 | Surgery total duration=65910,00
+Surgeon load map:{s3=10800, s4=10530, s5=8550, s6=9930, s0=5460, s1=6720, s2=13920}
+Release day avg=7,54 due avg=14,37 window avg=6,82
+Optional patients=281,00 optional LOS sum=2253,00 free bed-days=1992,00 risk days (unalloc est)=261,00
+----------------------------------------------
+--- i27 ---
+Beds:77 Rooms:26 Days:28 Nurses:55 Patients:493 Mand:123 Occu:41
+Patients/Nurse:8,96 Patients/Room:18,96 Patients/Bed/Day:0,23
+LOS Patients avg/med:4,65/4,00 | LOS Occ avg/med:3,56/3,00
+Bed-days: total=2156,00 occupants=146,00 patients(potential)=2290,00
+Workload vs capacity (occupants only): demand=729,00 cap=12502,00 gap min/avg/max=78,00/140,15/169,00
+Workload totals: occupants=729,00 patients=13594,00 total=14323,00 capacity=12502,00 total gap=-1821,00
+Skill supply:{0=24, 1=8, 2=23} | Skill demand (occ+pat):{0=3241, 1=2457, 2=1610} | maxReq=2 maxSup=2
+Patient workload by shift:[5132,00, 5026,00, 3436,00]
+OT capacity total=192120,00 min/day=4200,00 max/day=8880,00 | Surgery total duration=70980,00
+Surgeon load map:{s3=12000, s4=9210, s5=7860, s6=9300, s7=8940, s0=7170, s1=7890, s2=8610}
+Release day avg=5,14 due avg=9,54 window avg=4,40
+Optional patients=370,00 optional LOS sum=2290,00 free bed-days=2010,00 risk days (unalloc est)=280,00
+----------------------------------------------
+--- i28 ---
+Beds:80 Rooms:26 Days:21 Nurses:51 Patients:383 Mand:192 Occu:29
+Patients/Nurse:7,51 Patients/Room:14,73 Patients/Bed/Day:0,23
+LOS Patients avg/med:4,73/4,00 | LOS Occ avg/med:3,21/3,00
+Bed-days: total=1680,00 occupants=93,00 patients(potential)=1811,00
+Workload vs capacity (occupants only): demand=451,00 cap=9383,00 gap min/avg/max=94,00/141,78/170,00
+Workload totals: occupants=451,00 patients=10763,00 total=11214,00 capacity=9383,00 total gap=-1831,00
+Skill supply:{0=17, 1=14, 2=20} | Skill demand (occ+pat):{0=2561, 1=1874, 2=1277} | maxReq=2 maxSup=2
+Patient workload by shift:[4074,00, 3972,00, 2717,00]
+OT capacity total=99000,00 min/day=960,00 max/day=6480,00 | Surgery total duration=53220,00
+Surgeon load map:{s3=10680, s4=11610, s0=10020, s1=9630, s2=11280}
+Release day avg=7,75 due avg=11,80 window avg=4,05
+Optional patients=191,00 optional LOS sum=1811,00 free bed-days=1587,00 risk days (unalloc est)=224,00
+----------------------------------------------
+--- i29 ---
+Beds:81 Rooms:28 Days:14 Nurses:60 Patients:264 Mand:56 Occu:44
+Patients/Nurse:4,40 Patients/Room:9,43 Patients/Bed/Day:0,23
+LOS Patients avg/med:5,09/4,00 | LOS Occ avg/med:3,84/3,00
+Bed-days: total=1134,00 occupants=169,00 patients(potential)=1343,00
+Workload vs capacity (occupants only): demand=851,00 cap=6713,00 gap min/avg/max=88,00/139,57/177,00
+Workload totals: occupants=851,00 patients=8051,00 total=8902,00 capacity=6713,00 total gap=-2189,00
+Skill supply:{0=24, 1=20, 2=16} | Skill demand (occ+pat):{0=2040, 1=1480, 2=1016} | maxReq=2 maxSup=2
+Patient workload by shift:[3056,00, 2958,00, 2037,00]
+OT capacity total=128520,00 min/day=5280,00 max/day=11280,00 | Surgery total duration=43440,00
+Surgeon load map:{s3=5790, s4=2760, s5=5670, s6=3360, s7=5220, s8=4080, s9=5040, s0=3360, s1=6420, s2=1740}
+Release day avg=2,31 due avg=4,11 window avg=1,80
+Optional patients=208,00 optional LOS sum=1343,00 free bed-days=965,00 risk days (unalloc est)=378,00
+----------------------------------------------
+--- i30 ---
+Beds:78 Rooms:25 Days:21 Nurses:50 Patients:408 Mand:212 Occu:39
+Patients/Nurse:8,16 Patients/Room:16,32 Patients/Bed/Day:0,25
+LOS Patients avg/med:4,74/4,00 | LOS Occ avg/med:3,10/3,00
+Bed-days: total=1638,00 occupants=121,00 patients(potential)=1934,00
+Workload vs capacity (occupants only): demand=602,00 cap=8988,00 gap min/avg/max=74,00/133,11/161,00
+Workload totals: occupants=602,00 patients=11584,00 total=12186,00 capacity=8988,00 total gap=-3198,00
+Skill supply:{0=19, 1=14, 2=17} | Skill demand (occ+pat):{0=2739, 1=2079, 2=1347} | maxReq=2 maxSup=2
+Patient workload by shift:[4366,00, 4286,00, 2932,00]
+OT capacity total=129480,00 min/day=3480,00 max/day=7920,00 | Surgery total duration=57600,00
+Surgeon load map:{s3=10050, s4=7440, s5=9420, s6=8760, s0=6900, s1=6750, s2=8280}
+Release day avg=6,90 due avg=11,82 window avg=4,92
+Optional patients=196,00 optional LOS sum=1934,00 free bed-days=1517,00 risk days (unalloc est)=417,00
+----------------------------------------------

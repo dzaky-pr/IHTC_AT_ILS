@@ -1,0 +1,2 @@
+atils_log_one_run_11_run/*.csv filter=lfs diff=lfs merge=lfs -text
+atils_log_one_run_11_run_2_hour/*.csv filter=lfs diff=lfs merge=lfs -text
