@@ -172,7 +172,7 @@ def create_boxplot(log_dir, output_dir):
     
     # Title and labels
     ax.set_title(
-        'Final Cost Distribution Across 11 Runs per Instance',
+        'Final Cost Distribution Across 11 Runs per Instance - ATILS',
         fontsize=14,
         fontweight='bold',
         pad=15
